@@ -29,7 +29,6 @@ git checkout -b develop
 git pull
 npm install
 ng serve
-
 ```
 
 ### Demo
