@@ -1,0 +1,44 @@
+<div class="container mainUploadDiv" [ngStyle]="{'height': screenHeight+'px'}">
+  <div class="container">
+    <div class="container-fluid text-center">
+      <img class="logoImage" src="../assets/logo_dark.svg" />
+    </div>
+    <div class="container" style="max-width: 500px">
+      <div class="container">
+        <div class="col">
+          <div class="row text-center">
+            <h2>Upload your <span style="color: #b5dd51">JSON</span> table file</h2>
+          </div>
+          <div class="row text-center">
+            <h4>Make sure your JSON meets the following formats:</h4>
+          </div>
+          <div class="row">
+            <code style="
+              background-color: #1c1c1c;
+              text-align: center;
+              color: greenyellow;
+            ">
+            <span style="color:magenta">Array of Objects</span>
+            <br>
+            [ {{ "{...}, {...}, {...}" }} ]
+            <br />
+            <span style="color: white">or</span>
+            <br />
+            <span style="color:magenta">Objects</span>
+            <br>
+            {{ "{...},{...},{...}" }}
+          </code>
+          </div>
+          <br />
+          <div class="row">
+            <button (click)="file.click()" mat-flat-button color="primary">
+              Upload your file <mat-icon>file_upload</mat-icon>
+            </button>
+            <input (change)="onFileUpload($event)" type="file" #file id="json">
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

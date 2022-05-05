@@ -1,0 +1,11 @@
+.mainUploadDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logoImage {
+  width: 100px;
+}
+input[type="file"] {
+  display: none;
+}
